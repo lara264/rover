@@ -22,7 +22,12 @@ public class RoverInformation
     {
         return "Rover: name= " + name; 
     }
-    
+   
+   private void die()
+   {
+       isAlive = false;
+       System.out.println(name + " has died :(");
+   }
     
    //Directions
    public void move(int n)
@@ -68,10 +73,22 @@ public class RoverInformation
        {
            return "South";
        }
+       else if (d == 3)
+       {    
+           return "West";
+       }
        else 
        {
-           return "West";
+           //Fix this so it goes back to 0 and counts from zero
+           if (d > 3)
+           {
+               return name + " is making circles. " + name +  " is dizzy";
+           }    
+           else
+           {
+               return name + " is making circles. " + name + " is dizzy";
+           }  
+       }  
        }
    }
 
-}

@@ -14,6 +14,9 @@ public class RoverMain
         System.out.println(r1);
         
         r1.move(1);
+        r1.move(3);
+        r1.move(-5);
+        r1.move(7);
     }    
     
     
